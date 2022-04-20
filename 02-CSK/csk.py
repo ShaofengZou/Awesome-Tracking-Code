@@ -30,7 +30,7 @@ class CSK:
 
         # Detection
         responses = self.detection(self.alphaf,self.x,z,0.2)
-        curr = np.unravel_index(np.argmax(responses, axis=None), responses.shape)
+        curr = np.unravel_index(np.argmax(responses, axis=None), responses.shape) # 返回最大值响应在多维数组中的索引，np.argmax(responses, axis=None)只返回flatten成一维数组后的索引值
         dy = curr[0]-self.prev[0]
         dx = curr[1]-self.prev[1]
 
